@@ -5,6 +5,7 @@ import { Character, Roster, Team } from "./types";
 import CurrentTeam from "./Components/CurrentTeam";
 
 import ratioRoster from "./helpers/ratios/JWongRatio";
+import Header from "./Components/Header";
 
 function App() {
   const [characters, setCharacters] = useState<Character[] | null>(null);
@@ -46,10 +47,15 @@ function App() {
 
   return (
     <>
+      <Header />
       <button onClick={resetSelection}>Reset</button>
-      <h2>{ratioPoints.used}</h2>
-      <CurrentTeam team={currentTeam} />
-      {characters ? <CharacterSelect characters={characters} handleSelectCharacter={pickCharacter} points={ratioPoints} fullTeam={fullTeam} /> : null}
+
+      <div className="main-content-wrapper">
+        <CurrentTeam team={currentTeam} />
+        {characters ? (
+          <CharacterSelect characters={characters} handleSelectCharacter={pickCharacter} points={ratioPoints} fullTeam={fullTeam} />
+        ) : null}
+      </div>
     </>
   );
 }

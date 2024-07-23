@@ -15,6 +15,11 @@
   flex-direction: column;
 }
 
+.character-icon {
+  min-width: 45px;
+  width: 5vw;
+}
+
 .character-unavailable {
   opacity: 0.3;
 }
