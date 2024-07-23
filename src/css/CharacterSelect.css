@@ -1,0 +1,20 @@
+.character-select-6-icon-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.character-select-8-icon-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+#character-select-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.character-unavailable {
+  opacity: 0.3;
+}

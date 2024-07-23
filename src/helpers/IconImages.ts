@@ -60,7 +60,7 @@ export {
   Akuma,
   Amingo,
   Anakaris,
-  BB,
+  BB_Hood,
   Blackheart,
   Cable,
   Cammy,

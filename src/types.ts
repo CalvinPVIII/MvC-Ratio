@@ -17,3 +17,7 @@ export interface RatioSystem {
   maxPoints: number;
   roster: Roster;
 }
+
+export interface Team {
+  [key: number]: Character | null;
+}

@@ -30,7 +30,7 @@ const characters: Roster = {
   },
   BB_Hood: {
     name: "BB Hood",
-    icon: Icon.BB,
+    icon: Icon.BB_Hood,
     portrait: Portrait.BB_Hood,
     hyper: Hyper.B_B_Hood,
     pointCost: 0,
