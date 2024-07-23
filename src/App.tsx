@@ -13,6 +13,7 @@ function App() {
   const [currentPosSelect, setCurrentPosSelect] = useState<number>(1);
   const [ratioPoints, setRatioPoints] = useState({ used: 0, max: 7 });
   const [fullTeam, setFullTeam] = useState<boolean>(false);
+  const [hoveredCharacter, setHoveredCharacter] = useState<Character | null>(null);
 
   useEffect(() => {
     const sortedRoster = sortRoster(ratioRoster.roster);
@@ -43,6 +44,11 @@ function App() {
     setFullTeam(false);
     setRatioPoints({ ...ratioPoints, used: 0 });
     setCurrentTeam({ 1: null, 2: null, 3: null });
+    setCurrentPosSelect(1);
+  };
+
+  const handleCharacterHover = (char: Character | null) => {
+    setHoveredCharacter(char);
   };
 
   return (
@@ -51,10 +57,17 @@ function App() {
       <button onClick={resetSelection}>Reset</button>
 
       <div className="main-content-wrapper">
-        <CurrentTeam team={currentTeam} />
+        <CurrentTeam team={currentTeam} currentPosition={currentPosSelect} hoveredCharacter={hoveredCharacter} />
         {characters ? (
-          <CharacterSelect characters={characters} handleSelectCharacter={pickCharacter} points={ratioPoints} fullTeam={fullTeam} />
+          <CharacterSelect
+            characters={characters}
+            handleSelectCharacter={pickCharacter}
+            points={ratioPoints}
+            fullTeam={fullTeam}
+            onCharacterHover={handleCharacterHover}
+          />
         ) : null}
+        <div className="main-content-spacer"></div>
       </div>
     </>
   );

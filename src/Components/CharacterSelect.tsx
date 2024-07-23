@@ -6,6 +6,7 @@ interface CharacterSelectProps {
   handleSelectCharacter: (character: Character) => void;
   points: { used: number; max: number };
   fullTeam: boolean;
+  onCharacterHover: (character: Character | null) => void;
 }
 
 export default function CharacterSelect(props: CharacterSelectProps) {
