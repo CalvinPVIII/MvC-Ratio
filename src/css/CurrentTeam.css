@@ -10,23 +10,22 @@
 .current-team-wrapper p {
   color: white;
   font-family: Montserrat;
-  /* text-align: center; */
 }
 
 .selected-character-wrapper p {
   max-width: 50%;
-  font-size: clamp(0.5rem, 1vw, 1rem); /* min 200px, preferred 50% of viewport width, max 800px */
+  font-size: clamp(0.5rem, 1vw, 1rem);
 }
 
 .selected-character-portrait {
-  width: clamp(60px, 10vw, 240px); /* min 200px, preferred 50% of viewport width, max 800px */
-  height: auto; /* Maintains aspect ratio */
+  width: clamp(60px, 10vw, 240px);
+  height: auto;
 }
 
 .point-info {
   display: flex;
   flex-direction: column;
-  font-size: clamp(0.5rem, 1vw, 1rem); /* min 200px, preferred 50% of viewport width, max 800px */
+  font-size: clamp(0.5rem, 1vw, 1rem);
   text-align: center;
   margin-bottom: 10px;
 }
@@ -45,36 +44,19 @@
   border: 1px solid rgb(255, 255, 255);
 }
 
-/* 
-
 .selected-character-wrapper {
-  display: flex;
-  font-family: Montserrat;
-  color: white;
-  align-items: center;
-  text-shadow: 2px 2px black;
-  border: 1px solid black;
-  font-weight: 700;
-
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  animation: reveal 1s forwards;
+  animation-delay: 0.1s;
+  clip-path: inset(100% 0 100% 0);
+  visibility: hidden;
 }
 
-.current-team-wrapper {
-  height: fit-content;
-  display: flex;
-
-  flex-direction: row;
-  background-color: rgb(31, 25, 26);
-  min-height: 100px;
-
-  margin-top: -10px;
+@keyframes reveal {
+  0% {
+    clip-path: inset(0 100% 100% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    visibility: visible;
+  }
 }
-
-.character-placeholder {
-  color: white;
-  flex-grow: 1;
-  font-family: Montserrat;
-  text-shadow: 2px 2px black;
-  padding: 10px;
-  border: 1px solid black;
-} */

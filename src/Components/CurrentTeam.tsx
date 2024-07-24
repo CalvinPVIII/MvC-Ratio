@@ -56,9 +56,6 @@ export default function CurrentTeam(props: CurrentTeamProps) {
       ) : (
         <div className="character-placeholder"></div>
       )}
-      {/* <div className="info-div">
-        <button onClick={props.handleReset}>Reset</button>
-      </div> */}
     </div>
   );
 }
