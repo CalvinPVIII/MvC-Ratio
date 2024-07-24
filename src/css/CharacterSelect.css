@@ -13,17 +13,23 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto; */
   flex-grow: 1;
 }
 
 .character-icon {
-  min-width: 45px;
-  width: 5vw;
+  min-width: 40px;
+  width: 7vw;
+  max-width: 110px;
+  border: 2px solid rgb(255, 236, 26);
+}
+
+.character-selectable {
+  transition: all 100ms ease-in-out;
+}
+
+.character-selectable:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .character-unavailable {

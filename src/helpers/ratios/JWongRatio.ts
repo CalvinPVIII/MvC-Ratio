@@ -241,7 +241,7 @@ const characters: Roster = {
     icon: Icon.Marrow,
     portrait: Portrait.Marrow,
     hyper: Hyper.Marrow,
-    pointCost: 0,
+    pointCost: 1,
     characterSelectOrder: 17,
   },
   Megaman: {

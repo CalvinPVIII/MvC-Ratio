@@ -4,30 +4,61 @@ interface CurrentTeamProps {
   team: Team;
   currentPosition: number;
   hoveredCharacter: Character | null;
+  pointInfo: { used: number; max: number };
+  handleReset: () => void;
 }
 
 export default function CurrentTeam(props: CurrentTeamProps) {
   return (
     <div className="current-team-wrapper">
-      <div className="selected-character-wrapper">
-        <img className="selected-character-portrait" src={props.team[1]?.hyper} />
-        <h1>
-          {props.team[1]?.name} - {props.team[1]?.pointCost} points
-        </h1>
+      <div className="point-info">
+        <p>Max Points: {props.pointInfo.max}</p>
+        <p>Points Used: {props.pointInfo.used}</p>
+        <button onClick={props.handleReset}>RESET</button>
       </div>
+      {props.team[1] ? (
+        <div className="selected-character-wrapper">
+          <img className="selected-character-portrait" src={props.team[1].hyper} />
+          <div>
+            <p>{props.team[1].name}</p>
+            <p>
+              {props.team[1].pointCost} {props.team[1].pointCost === 1 ? "point" : "points"}
+            </p>
+          </div>
+        </div>
+      ) : (
+        <div className="character-placeholder"></div>
+      )}
 
-      <div className="selected-character-wrapper">
-        <img className="selected-character-portrait" src={props.team[2]?.hyper} />
-        <h1>
-          {props.team[2]?.name} - {props.team[2]?.pointCost} points
-        </h1>
-      </div>
-      <div className="selected-character-wrapper">
-        <img className="selected-character-portrait" src={props.team[3]?.hyper} />
-        <h1>
-          {props.team[3]?.name} - {props.team[3]?.pointCost} points
-        </h1>
-      </div>
+      {props.team[2] ? (
+        <div className="selected-character-wrapper">
+          <img className="selected-character-portrait" src={props.team[2].hyper} />
+          <div>
+            <p>{props.team[2].name}</p>
+            <p>
+              {props.team[2].pointCost} {props.team[2].pointCost === 1 ? "point" : "points"}
+            </p>
+          </div>
+        </div>
+      ) : (
+        <div className="character-placeholder"></div>
+      )}
+      {props.team[3] ? (
+        <div className="selected-character-wrapper">
+          <img className="selected-character-portrait" src={props.team[3].hyper} />
+          <div>
+            <p>{props.team[3].name}</p>
+            <p>
+              {props.team[3].pointCost} {props.team[3].pointCost === 1 ? "point" : "points"}
+            </p>
+          </div>
+        </div>
+      ) : (
+        <div className="character-placeholder"></div>
+      )}
+      {/* <div className="info-div">
+        <button onClick={props.handleReset}>Reset</button>
+      </div> */}
     </div>
   );
 }

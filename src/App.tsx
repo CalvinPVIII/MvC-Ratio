@@ -53,22 +53,23 @@ function App() {
 
   return (
     <>
-      <Header />
-      <button onClick={resetSelection}>Reset</button>
-
-      <div className="main-content-wrapper">
-        <CurrentTeam team={currentTeam} currentPosition={currentPosSelect} hoveredCharacter={hoveredCharacter} />
-        {characters ? (
-          <CharacterSelect
-            characters={characters}
-            handleSelectCharacter={pickCharacter}
-            points={ratioPoints}
-            fullTeam={fullTeam}
-            onCharacterHover={handleCharacterHover}
-          />
-        ) : null}
-        <div className="main-content-spacer"></div>
-      </div>
+      {/* <Header /> */}
+      <CurrentTeam
+        team={currentTeam}
+        currentPosition={currentPosSelect}
+        hoveredCharacter={hoveredCharacter}
+        pointInfo={ratioPoints}
+        handleReset={resetSelection}
+      />
+      {characters ? (
+        <CharacterSelect
+          characters={characters}
+          handleSelectCharacter={pickCharacter}
+          points={ratioPoints}
+          fullTeam={fullTeam}
+          onCharacterHover={handleCharacterHover}
+        />
+      ) : null}
     </>
   );
 }
