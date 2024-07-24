@@ -26,6 +26,16 @@ export default function CurrentTeam(props: CurrentTeamProps) {
             </p>
           </div>
         </div>
+      ) : props.hoveredCharacter && props.currentPosition === 1 ? (
+        <div className="hovered-character-wrapper">
+          <img className="selected-character-portrait" src={props.hoveredCharacter.hyper} />
+          <div>
+            <p>{props.hoveredCharacter.name}</p>
+            <p>
+              {props.hoveredCharacter.pointCost} {props.hoveredCharacter.pointCost === 1 ? "point" : "points"}
+            </p>
+          </div>
+        </div>
       ) : (
         <div className="character-placeholder"></div>
       )}
@@ -40,6 +50,16 @@ export default function CurrentTeam(props: CurrentTeamProps) {
             </p>
           </div>
         </div>
+      ) : props.hoveredCharacter && props.currentPosition === 2 ? (
+        <div className="hovered-character-wrapper">
+          <img className="selected-character-portrait" src={props.hoveredCharacter.hyper} />
+          <div>
+            <p>{props.hoveredCharacter.name}</p>
+            <p>
+              {props.hoveredCharacter.pointCost} {props.hoveredCharacter.pointCost === 1 ? "point" : "points"}
+            </p>
+          </div>
+        </div>
       ) : (
         <div className="character-placeholder"></div>
       )}
@@ -50,6 +70,16 @@ export default function CurrentTeam(props: CurrentTeamProps) {
             <p>{props.team[3].name}</p>
             <p>
               {props.team[3].pointCost} {props.team[3].pointCost === 1 ? "point" : "points"}
+            </p>
+          </div>
+        </div>
+      ) : props.hoveredCharacter && props.currentPosition === 3 ? (
+        <div className="hovered-character-wrapper">
+          <img className="selected-character-portrait" src={props.hoveredCharacter.hyper} />
+          <div>
+            <p>{props.hoveredCharacter.name}</p>
+            <p>
+              {props.hoveredCharacter.pointCost} {props.hoveredCharacter.pointCost === 1 ? "point" : "points"}
             </p>
           </div>
         </div>

@@ -38,6 +38,7 @@ function App() {
     }
 
     setRatioPoints({ ...ratioPoints, used: usedPoints });
+    setHoveredCharacter(null);
   };
 
   const resetSelection = () => {

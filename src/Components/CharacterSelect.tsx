@@ -22,6 +22,8 @@ export default function CharacterSelect(props: CharacterSelectProps) {
                 className="character-icon icon-in-6-row character-selectable"
                 src={character.icon}
                 onClick={() => props.handleSelectCharacter(character)}
+                onMouseEnter={() => props.onCharacterHover(character)}
+                onMouseLeave={() => props.onCharacterHover(null)}
               />
             )}
           </>
@@ -37,6 +39,8 @@ export default function CharacterSelect(props: CharacterSelectProps) {
                 className="character-icon icon-in-8-row character-selectable"
                 src={character.icon}
                 onClick={() => props.handleSelectCharacter(character)}
+                onMouseEnter={() => props.onCharacterHover(character)}
+                onMouseLeave={() => props.onCharacterHover(null)}
               />
             )}
           </>
@@ -52,6 +56,8 @@ export default function CharacterSelect(props: CharacterSelectProps) {
                 className="character-icon icon-in-6-row character-selectable"
                 src={character.icon}
                 onClick={() => props.handleSelectCharacter(character)}
+                onMouseEnter={() => props.onCharacterHover(character)}
+                onMouseLeave={() => props.onCharacterHover(null)}
               />
             )}
           </>
