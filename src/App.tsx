@@ -5,7 +5,6 @@ import { Character, Roster, Team } from "./types";
 import CurrentTeam from "./Components/CurrentTeam";
 
 import ratioRoster from "./helpers/ratios/JWongRatio";
-import Header from "./Components/Header";
 import { useMediaQuery } from "react-responsive";
 
 function App() {
@@ -57,7 +56,6 @@ function App() {
 
   return (
     <>
-      {/* <Header /> */}
       {!isSmallScreen ? (
         <CurrentTeam
           team={currentTeam}

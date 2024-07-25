@@ -1,5 +1,6 @@
 import { Character } from "../types";
 import "../css/CharacterSelect.css";
+import React from "react";
 
 interface CharacterSelectProps {
   characters: Character[];
@@ -14,7 +15,7 @@ export default function CharacterSelect(props: CharacterSelectProps) {
     <div id="character-select-wrapper">
       <div className="character-select-6-icon-row">
         {props.characters.slice(0, 12).map((character) => (
-          <>
+          <React.Fragment key={character.name}>
             {character.pointCost + props.points.used > props.points.max || props.fullTeam ? (
               <img className="character-icon icon-in-6-row character-unavailable" src={character.icon} />
             ) : (
@@ -26,12 +27,12 @@ export default function CharacterSelect(props: CharacterSelectProps) {
                 onMouseLeave={() => props.onCharacterHover(null)}
               />
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
       <div className="character-select-8-icon-row">
         {props.characters.slice(12, 44).map((character) => (
-          <>
+          <React.Fragment key={character.name}>
             {character.pointCost + props.points.used > props.points.max || props.fullTeam ? (
               <img className="character-icon icon-in-8-row character-unavailable" src={character.icon} />
             ) : (
@@ -43,12 +44,12 @@ export default function CharacterSelect(props: CharacterSelectProps) {
                 onMouseLeave={() => props.onCharacterHover(null)}
               />
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
       <div className="character-select-6-icon-row">
         {props.characters.slice(44).map((character) => (
-          <>
+          <React.Fragment key={character.name}>
             {character.pointCost + props.points.used > props.points.max || props.fullTeam ? (
               <img className="character-icon icon-in-6-row character-unavailable" src={character.icon} />
             ) : (
@@ -60,7 +61,7 @@ export default function CharacterSelect(props: CharacterSelectProps) {
                 onMouseLeave={() => props.onCharacterHover(null)}
               />
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

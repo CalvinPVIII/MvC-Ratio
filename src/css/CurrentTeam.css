@@ -70,9 +70,8 @@
   flex-flow: row wrap;
   background-color: #151515;
   gap: 20px;
-  /* position: absolute;
-  bottom: 0; */
   width: 100vw;
+  margin-top: 10px;
 }
 .current-team-wrapper-small p {
   color: white;
