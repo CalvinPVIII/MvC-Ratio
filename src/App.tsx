@@ -6,8 +6,11 @@ import CurrentTeam from "./Components/CurrentTeam";
 
 import ratioRoster from "./helpers/ratios/JWongRatio";
 import Header from "./Components/Header";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 900px)" });
+
   const [characters, setCharacters] = useState<Character[] | null>(null);
   const [currentTeam, setCurrentTeam] = useState<Team>({ 1: null, 2: null, 3: null });
   const [currentPosSelect, setCurrentPosSelect] = useState<number>(1);
@@ -55,13 +58,16 @@ function App() {
   return (
     <>
       {/* <Header /> */}
-      <CurrentTeam
-        team={currentTeam}
-        currentPosition={currentPosSelect}
-        hoveredCharacter={hoveredCharacter}
-        pointInfo={ratioPoints}
-        handleReset={resetSelection}
-      />
+      {!isSmallScreen ? (
+        <CurrentTeam
+          team={currentTeam}
+          currentPosition={currentPosSelect}
+          hoveredCharacter={hoveredCharacter}
+          pointInfo={ratioPoints}
+          handleReset={resetSelection}
+        />
+      ) : null}
+
       {characters ? (
         <CharacterSelect
           characters={characters}
@@ -69,6 +75,16 @@ function App() {
           points={ratioPoints}
           fullTeam={fullTeam}
           onCharacterHover={handleCharacterHover}
+        />
+      ) : null}
+
+      {isSmallScreen ? (
+        <CurrentTeam
+          team={currentTeam}
+          currentPosition={currentPosSelect}
+          hoveredCharacter={hoveredCharacter}
+          pointInfo={ratioPoints}
+          handleReset={resetSelection}
         />
       ) : null}
     </>

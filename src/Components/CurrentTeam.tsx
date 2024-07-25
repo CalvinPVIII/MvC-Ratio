@@ -1,5 +1,6 @@
 import { Character, Team } from "../types";
 import "../css/CurrentTeam.css";
+import { useMediaQuery } from "react-responsive";
 interface CurrentTeamProps {
   team: Team;
   currentPosition: number;
@@ -9,8 +10,10 @@ interface CurrentTeamProps {
 }
 
 export default function CurrentTeam(props: CurrentTeamProps) {
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 900px)" });
+
   return (
-    <div className="current-team-wrapper">
+    <div className={isSmallScreen ? "current-team-wrapper-small" : `current-team-wrapper`}>
       <div className="point-info">
         <p>Max Points: {props.pointInfo.max}</p>
         <p>Points Used: {props.pointInfo.used}</p>

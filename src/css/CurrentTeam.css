@@ -64,3 +64,18 @@
     visibility: visible;
   }
 }
+
+.current-team-wrapper-small {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #151515;
+  gap: 20px;
+  /* position: absolute;
+  bottom: 0; */
+  width: 100vw;
+}
+.current-team-wrapper-small p {
+  color: white;
+  font-family: Montserrat;
+  font-size: 0.8rem;
+}
