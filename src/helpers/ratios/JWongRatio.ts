@@ -9,7 +9,7 @@ const characters: Roster = {
     icon: Icon.Akuma,
     portrait: Portrait.Akuma,
     hyper: Hyper.Akuma,
-    pointCost: 1,
+    pointCost: 2,
     characterSelectOrder: 22,
   },
   Amingo: {
@@ -17,7 +17,7 @@ const characters: Roster = {
     icon: Icon.Amingo,
     portrait: Portrait.Amingo,
     hyper: Hyper.Amingo,
-    pointCost: 1,
+    pointCost: 0,
     characterSelectOrder: 9,
   },
   Anakaris: {
@@ -25,7 +25,7 @@ const characters: Roster = {
     icon: Icon.Anakaris,
     portrait: Portrait.Anakaris,
     hyper: Hyper.Anakaris,
-    pointCost: 2,
+    pointCost: 3,
     characterSelectOrder: 31,
   },
   BB_Hood: {
@@ -33,7 +33,7 @@ const characters: Roster = {
     icon: Icon.BB_Hood,
     portrait: Portrait.BB_Hood,
     hyper: Hyper.B_B_Hood,
-    pointCost: 2,
+    pointCost: 3,
     characterSelectOrder: 40,
   },
   Blackheart: {
@@ -81,7 +81,7 @@ const characters: Roster = {
     icon: Icon.Charlie,
     portrait: Portrait.Charlie,
     hyper: Hyper.Charlie,
-    pointCost: 2,
+    pointCost: 3,
     characterSelectOrder: 21,
   },
   ChunLi: {
@@ -121,7 +121,7 @@ const characters: Roster = {
     icon: Icon.Dhalsim,
     portrait: Portrait.Dhalsim,
     hyper: Hyper.Dhalsim,
-    pointCost: 3,
+    pointCost: 4,
     characterSelectOrder: 29,
   },
   DoctorDoom: {
@@ -129,7 +129,7 @@ const characters: Roster = {
     icon: Icon.Doom,
     portrait: Portrait.DoctorDoom,
     hyper: Hyper.DoctorDoom,
-    pointCost: 4,
+    pointCost: 5,
     characterSelectOrder: 41,
   },
   Felicia: {
@@ -137,7 +137,7 @@ const characters: Roster = {
     icon: Icon.Felicia,
     portrait: Portrait.Felicia,
     hyper: Hyper.Felicia,
-    pointCost: 1,
+    pointCost: 2,
     characterSelectOrder: 1,
   },
   Gambit: {
@@ -145,7 +145,7 @@ const characters: Roster = {
     icon: Icon.Gambit,
     portrait: Portrait.Gambit,
     hyper: Hyper.Gambit,
-    pointCost: 2,
+    pointCost: 3,
     characterSelectOrder: 27,
   },
   Guile: {
@@ -177,7 +177,7 @@ const characters: Roster = {
     icon: Icon.Iceman,
     portrait: Portrait.Iceman,
     hyper: Hyper.IceMan,
-    pointCost: 2,
+    pointCost: 3,
     characterSelectOrder: 26,
   },
   Ironman: {
@@ -193,7 +193,7 @@ const characters: Roster = {
     icon: Icon.Jill,
     portrait: Portrait.Jill,
     hyper: Hyper.Jill,
-    pointCost: 2,
+    pointCost: 3,
     characterSelectOrder: 7,
   },
   Jin: {
@@ -201,7 +201,7 @@ const characters: Roster = {
     icon: Icon.Jin,
     portrait: Portrait.Jin,
     hyper: Hyper.Jin,
-    pointCost: 2,
+    pointCost: 3,
     characterSelectOrder: 30,
   },
   Juggernaut: {
@@ -209,7 +209,7 @@ const characters: Roster = {
     icon: Icon.Juggernaut,
     portrait: Portrait.Juggernaut,
     hyper: Hyper.Juggernaut,
-    pointCost: 3,
+    pointCost: 2,
     characterSelectOrder: 35,
   },
   Ken: {
@@ -217,7 +217,7 @@ const characters: Roster = {
     icon: Icon.Ken,
     portrait: Portrait.Ken,
     hyper: Hyper.Ken,
-    pointCost: 3,
+    pointCost: 2,
     characterSelectOrder: 13,
   },
   M_Bison: {
@@ -257,7 +257,7 @@ const characters: Roster = {
     icon: Icon.Morrigan,
     portrait: Portrait.Morrigan,
     hyper: Hyper.Morrigan,
-    pointCost: 2,
+    pointCost: 1,
     characterSelectOrder: 39,
   },
   OmegaRed: {
@@ -289,7 +289,7 @@ const characters: Roster = {
     icon: Icon.Roll,
     portrait: Portrait.Roll,
     hyper: Hyper.Roll,
-    pointCost: 0,
+    pointCost: -1,
     characterSelectOrder: 52,
   },
   RubyHeart: {
@@ -297,7 +297,7 @@ const characters: Roster = {
     icon: Icon.RubyHeart,
     portrait: Portrait.RubyHeart,
     hyper: Hyper.RubyHeart,
-    pointCost: 3,
+    pointCost: 4,
     characterSelectOrder: 24,
   },
   Ryu: {
@@ -321,7 +321,7 @@ const characters: Roster = {
     icon: Icon.Sakura,
     portrait: Portrait.Sakura,
     hyper: Hyper.Sakura,
-    pointCost: 3,
+    pointCost: 2,
     characterSelectOrder: 38,
   },
   Sentinel: {
@@ -337,7 +337,7 @@ const characters: Roster = {
     icon: Icon.Servbot,
     portrait: Portrait.Servbot,
     hyper: Hyper.ServBot,
-    pointCost: 0,
+    pointCost: -1,
     characterSelectOrder: 51,
   },
   ShumaGorath: {
@@ -345,7 +345,7 @@ const characters: Roster = {
     icon: Icon.ShumaGorath,
     portrait: Portrait.ShumaGorath,
     hyper: Hyper.Shuma_Gorath,
-    pointCost: 1,
+    pointCost: 0,
     characterSelectOrder: 48,
   },
   SilverSamurai: {
@@ -401,7 +401,7 @@ const characters: Roster = {
     icon: Icon.Thanos,
     portrait: Portrait.Thanos,
     hyper: Hyper.Thanos,
-    pointCost: 2,
+    pointCost: 1,
     characterSelectOrder: 6,
   },
   TronBonne: {
@@ -433,7 +433,7 @@ const characters: Roster = {
     icon: Icon.WolverineA,
     portrait: Portrait.WolverineAdamantium,
     hyper: Hyper.WolverineAdamantium,
-    pointCost: 1,
+    pointCost: 2,
     characterSelectOrder: 18,
   },
   WolverineBone: {
@@ -441,7 +441,7 @@ const characters: Roster = {
     icon: Icon.Wolverine,
     portrait: Portrait.WolverineBone,
     hyper: Hyper.WolverineBone,
-    pointCost: 1,
+    pointCost: 0,
     characterSelectOrder: 43,
   },
   Zangief: {
@@ -449,13 +449,13 @@ const characters: Roster = {
     icon: Icon.Zangief,
     portrait: Portrait.Zangief,
     hyper: Hyper.Zangief,
-    pointCost: 2,
+    pointCost: 1,
     characterSelectOrder: 23,
   },
 };
 
 const ratioRoster: RatioSystem = {
-  name: "Justin Wong's 2022 Ratio List",
+  name: "Justin Wong's 2024 Ratio List",
   description: "",
   roster: characters,
   maxPoints: 7,
